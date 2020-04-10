@@ -164,7 +164,11 @@ if (!preg_match("|^[-0-9a-z_\.]+@[-0-9a-z_^\.]+\.[a-z]{2,6}$|i", $_POST['email']
       setcookie('superpower3_value', isset($_POST['superpower3']) ? $_POST['superpower3'] : '', time() + 365 * 30 * 24 * 60 * 60);
     }
     
-    if (!empty($_POST['biography'])) {
+    if (empty($_POST['biography'])) {
+      setcookie('biography_error', '1', time() + 24 * 60 * 60);
+      $errors = TRUE;
+    }
+    else {
       setcookie('biography_value', $_POST['biography'], time() + 365 * 30 * 24 * 60 * 60);
     }
     

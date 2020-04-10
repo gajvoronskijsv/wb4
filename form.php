@@ -1,7 +1,6 @@
 <html>
   <head lang=ru>
     <meta charset="utf-8">
-    /* Сообщения об ошибках и поля с ошибками выводим с красным бордюром. */
     <link rel="stylesheet" href="style.css">
   </head>
  <body>
@@ -41,9 +40,9 @@ if (!empty($messages)) {
           <label><input type="radio" name ="limbs" value="l5"<?php if ($values['limbs'] == 'l5') {print 'checked="checked"';} ?>>Более четырех</label><br />
           
         <b <?php if ($errors['superpower']) {print 'class="error"';} ?> >Сверхспособности</b><br />
-          <label><input type="checkbox" name ="superpower" value="sp1" <?php if ($values['superpower1'] != '') {print 'checked="checked"';} ?> >Бессмертие</label><br />
-          <label><input type="checkbox" name ="superpower" value="sp2"<?php if ($values['superpower2'] != '') {print 'checked="checked"';} ?> >Всезнание</label><br />
-          <label><input type="checkbox" name ="superpower" value="sp3"<?php if ($values['superpower3'] != '') {print 'checked="checked"';} ?> >Всемогущество</label><br />
+          <label><input type="checkbox" name ="superpower1" value="sp1" <?php if ($values['superpower1'] != '') {print 'checked="checked"';} ?> >Бессмертие</label><br />
+          <label><input type="checkbox" name ="superpower2" value="sp2"<?php if ($values['superpower2'] != '') {print 'checked="checked"';} ?> >Всезнание</label><br />
+          <label><input type="checkbox" name ="superpower3" value="sp3"<?php if ($values['superpower3'] != '') {print 'checked="checked"';} ?> >Всемогущество</label><br />
 
         <label><b <?php if ($errors['biography']) {print 'class="error"';} ?> >Биография</b><br />
           <textarea name="biography" value="<?php print $values['biography']; ?>" ></textarea>
